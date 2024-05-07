@@ -1,0 +1,119 @@
+@font-face { 
+    font-family: 'Neue Montreal'; 
+    src: url('./PPNeueMontreal-Book.otf');
+    font-weight: 300;
+}
+
+@font-face { 
+    font-family: 'Neue Montreal'; 
+    src: url('./PPNeueMontreal-Bold.otf');
+    font-weight: bold;
+}
+
+@font-face { 
+    font-family: 'Neue Montreal'; 
+    src: url('./PPNeueMontreal-Italic.otf');
+    font-style: italic;
+}
+
+@font-face { 
+    font-family: 'Neue Montreal'; 
+    src: url('./PPNeueMontreal-Medium.otf');
+    font-weight: normal; 
+}
+
+@font-face { 
+    font-family: 'Neue Montreal'; 
+    src: url('./PPNeueMontreal-SemiBoldItalic.otf');
+    font-weight: 600; 
+    font-style: italic;
+}
+
+@font-face { 
+    font-family: 'Neue Montreal'; 
+    src: url('./PPNeueMontreal-Thin.otf');
+    font-weight: 100; 
+}
+
+
+.star-container {
+    width: 100px;
+    height: 100px;
+}
+
+.star {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    width: 10px;   /* Define a size for the container */
+    height: 10px;
+    /* border: 1px solid black; */
+    animation: rotateAndThin 16s infinite;
+}
+
+.line {
+    width: 1px;
+    height: 10px;
+    background-color: black;
+    position: absolute; /* Position lines relative to .star */
+    animation: widthChange 5.7s infinite;
+}
+
+.line.one {
+    transform: rotate(0deg);
+}
+
+.line.two {
+    transform: rotate(90deg);
+}
+
+.line.three {
+    transform: rotate(45deg);
+}
+
+.line.four {
+    transform: rotate(135deg);
+}
+
+@keyframes rotateAndThin {
+    0% {
+        transform: rotate(0deg);
+    }
+    12.5% {
+        transform: rotate(45deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    37.5% {
+        transform: rotate(135deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    62.5% {
+        transform: rotate(225deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    87.5% {
+        transform: rotate(315deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes widthChange {
+    0%, 100% {
+        width: 0.5px;
+    }
+    20%, 40% {
+        width: 1.5px;
+    }
+    60%, 80% {
+        width: 3px;
+    }
+}
